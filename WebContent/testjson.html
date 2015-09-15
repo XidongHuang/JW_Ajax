@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title type="text/javascript">Insert title here</title>
+<script type="text/javascript">
+	
+	var jsonObject ={
+			
+			"name":"Tony",
+			"age":12,
+			"address":{"city":"BeiJing","school":"AlgomaU"},
+			"teaching":function(){
+				
+				alert("JavaEE, Android...");
+			}
+			
+	};
+	
+	//alert(jsonObject.name);
+	//alert(jsonObject.address.city);
+	//jsonObject.teaching();
+	
+	
+	var jsonStr = "{'name':'tony'}";
+	
+	// Change a JSON String into JSON object!
+	
+	//use eval() method
+	var testStr = "alert('hello eval')";
+	//alert(testStr);
+	
+	
+	//eval change a String into local JS code to run
+	eval(testStr);
+	
+	var testObject = eval("("+jsonStr+")");
+	alert(testObject.name);
+
+</script>
+</head>
+    <body>
+    </body>
+</html>
